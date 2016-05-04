@@ -1,519 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="" />
-		<title>Real Estate</title>
-		<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
-		<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
-		<link rel="stylesheet" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" href="assets/css/neon-core.css">
-		<link rel="stylesheet" href="assets/css/neon-theme.css">
-		<link rel="stylesheet" href="assets/css/neon-forms.css">
-		<link rel="stylesheet" href="assets/css/custom.css">
-		
-		<script src="assets/js/jquery-1.11.0.min.js"></script>
-		<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body class="page-body  page-fade">
-		<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
-			<div class="sidebar-menu">
-				<header class="logo-env">
-					<!-- logo -->
-					<div class="logo">
-						<a href="index.html">
-							<img src="assets/images/logo@2x.png" width="120" alt="" />
-						</a>
-					</div>
-					
-					<!-- logo collapse icon -->
-					<div class="sidebar-collapse">
-						<a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
-							<i class="entypo-menu"></i>
-						</a>
-					</div>
-					<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
-					<div class="sidebar-mobile-menu visible-xs">
-						<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
-						<i class="entypo-menu"></i>
-						</a>
-					</div>
-				</header>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="" />
+    <title>Real Estate</title>
+    <link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/neon-core.css">
+    <link rel="stylesheet" href="assets/css/neon-theme.css">
+    <link rel="stylesheet" href="assets/css/neon-forms.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
-				<ul id="main-menu" class="">
-					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
-					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-					<!-- Search Bar -->
-					<li id="houseSearch">
-						<a id="home">
-							<i class="entypo-home"></i>
-							<span>Búsqueda de Casas</span>
-						</a>
-					</li>
-					<li class="active closed">
-						<a href="index.html">
-							<i class="entypo-gauge"></i>
-							<span>Administración</span>
-						</a>
-						<ul id="projects">
-							<li id="toggleHouses">
-								<a href="#">
-									<span>Casas</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span>Usuarios</span>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="page-body  page-fade">
+    <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+      <div class="sidebar-menu">
+        <header class="logo-env">
+        <!-- logo -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo@2x.png" width="120" alt="" />
+          </a>
+        </div>
 
-			<div class="main-content">	
-				<div class="row">
-					<!-- Profile Info and Notifications -->
-					<div class="col-md-6 col-sm-8 clearfix">
-						<h1 id="action"></h1>
-					</div>
-					<br>
-					<hr>
-				</div>
+        <!-- logo collapse icon -->
+        <div class="sidebar-collapse">
+          <a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+            <i class="entypo-menu"></i>
+          </a>
+        </div>
+        <!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+        <div class="sidebar-mobile-menu visible-xs">
+          <a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+            <i class="entypo-menu"></i>
+          </a>
+        </div>
+        </header>
 
-				<div id="mapOption">
-					<div class="row">
-					 <div class="panel panel-primary" id="charts_env"> 
-					 	<div class="panel-heading"> 
-					 		<div class="panel-title">Filtros de Búsqueda</div> 
-					 		<div class="panel-options"> 
-					 			<ul class="nav nav-tabs"> 
-					 				<li class="">
-					 					<a href="#area-chart" data-toggle="tab">Titulo</a>
-					 				</li> 
-					 				<li class="">
-					 					<a href="#line-chart" data-toggle="tab">Precio</a>
-					 				</li> 
-					 				<li class="active">
-					 					<a href="#geolocation" data-toggle="tab">Geolocalización</a>
-					 				</li> 
-					 			</ul> 
-					 		</div> 
-					 	</div> 
-					 	<div class="panel-body"> 
-					 		<div class="tab-content"> 
-					 			<div class="tab-pane" id="area-chart" style="">  
-					 			</div> 
-					 			<div class="tab-pane" id="line-chart" style="">  
-					 			</div> 
-					 			<div class="tab-pane active" id="geolocation" style="">  
-					 				<div class="form-group col-md-3">
-										<input placeholder="Dirección - Código Postal" class="form-control col-md-12" type="text" id="zipCode">
-									</div>
-									<div class="form-group col-md-2">
-										<div class="input-spinner">
-											<button type="button" class="btn btn-default">-</button>
-												<input id="controlDistance" type="text" class="form-control size-1" value="1" data-min="1" disabled>
-											<button type="button" class="btn btn-default">+</button>
-										</div>								
-									</div>
-					 			</div> 
-					 		</div> 
-					 		<div class="col-md-2">
-								<a href="#" id="searchButton" class="btn btn-primary col-md-12 col-xs-12" >Buscar</a>
-							</div>
-					 	</div>  
-					 </div>
-					</div>
-					<div class="row">
-						<div>
-						</div>
-						<div class="panel panel-primary" data-collapsed="0">
-							<div class="panel-heading">
-								<div class="panel-title">Mapa</div>
-								<div class="panel-options">
-									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
-								</div>
-								<div class="panel-options">
-									<a href="#" id="fullScr"><i class="entypo-resize-full"></i></a>
-								</div>
-							</div>
-							<div id="container" class="panel-body no-padding" style="display: block;">
-								<div style="height:400px;">
-									<div id="map-canvas" style="height:400px; width: 100%"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="houseAdmin" style="display:none">
-					<div>
-						<a href="#" class="btn btn-primary add">
-							<i class="entypo-plus"></i>
-							Agregar
-						</a>
-					</div>
-					<br>
-					<div class"row">
-						<table id="housesTable" class="table table-bordered datatable dataTable">
-							<thead>
-					            <tr>
-					                <th>Titulo</th>
-					                <th>Precio</th>
-					                <th>Publicado</th>
-					                <th>Fecha de Registro</th>
-					                <th>Usuario</th>
-					            </tr>
-					        </thead>
-						</table>
-					</div>
-				</div>		
-			</div>
-			
-		</div>
+        <ul id="main-menu" class="">
+          <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+          <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+          <!-- Search Bar -->
+          <li id="houseSearch">
+          <a id="home">
+            <i class="entypo-home"></i>
+            <span>Búsqueda de Casas</span>
+          </a>
+          </li>
+          <li class="active closed">
+          <a href="index.html">
+            <i class="entypo-gauge"></i>
+            <span>Administración</span>
+          </a>
+          <ul id="projects">
+            <li id="toggleHouses">
+            <a href="#">
+              <span>Casas</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+              <span>Usuarios</span>
+            </a>
+            </li>
+          </ul>
+          </li>
+        </ul>
+      </div>
 
-		<div class="modal fade" id="modal-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Agregar</h4>
-				</div>
-				
-				<div class="modal-body">
-					<input placeholder="Titulo" class="form-control col-md-12" type="text" id="title">
-					<input placeholder="Precio" class="form-control col-md-12" type="text" id="price">
-					<div class="input-group"> 
-						<input id="date" placeholder="Fecha de Publicación" type="text" class="form-control datepicker" data-format="D, dd MM yyyy"> 
-						<div class="input-group-addon"> 
-							<a href="#">
-								<i class="entypo-calendar"></i>
-							</a> 
-						</div> 
-					</div>
-					<div class="checkbox"> 
-						<label> 
-							<input type="checkbox" id="published" value="true">Publicado
-						</label> 
-					</div>
-					<input style="display:none;" id="latitude">
-					<input style="display:none;" id="longitude">
-					<div>Seleccionar Ubicación</div>
-					<div id="map-canvas1" style="height:200px; width: auto"></div>
-					
-					
-				</div>
-				
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-					<button id="create" type="button" class="btn btn-primary deleteBtn">Agregar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKA-vAfRLBxPYtJAlOJVcFP2ci_2DAh8Y&libraries=visualization&sensor=true_or_false"></script>
-<link rel="stylesheet" href="assets/js/jvectormap/jquery-jvectormap-1.2.2.css">
-<link rel="stylesheet" href="assets/js/rickshaw/rickshaw.min.css">
-<link rel="stylesheet" href="assets/js/daterangepicker/daterangepicker-bs3.css">
-<link rel="stylesheet" type="text/css" href="assets/js/uikit/addons/css/datepicker.css">
-<!-- Bottom Scripts -->
-<script src="assets/js/gsap/main-gsap.js"></script>
-<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/joinable.js"></script>
-<script src="assets/js/resizeable.js"></script>
-<script src="assets/js/neon-api.js"></script>
-<script src="assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
-<script src="assets/js/jquery.sparkline.min.js"></script>
-<script src="assets/js/rickshaw/vendor/d3.v3.js"></script>
-<script src="assets/js/rickshaw/rickshaw.min.js"></script>
-<script src="assets/js/bootstrap-datepicker.js"></script>
+      <div class="main-content">	
+        <div class="row">
+          <!-- Profile Info and Notifications -->
+          <div class="col-md-6 col-sm-8 clearfix">
+            <h1 id="action"></h1>
+          </div>
+          <br>
+          <hr>
+        </div>
 
-<script src="assets/js/raphael-min.js"></script>
-<script src="assets/js/jquery.dataTables.min.js"></script>
-<script src="assets/js/datatables/TableTools.min.js"></script>
-<script src="assets/js/dataTables.bootstrap.js"></script>
-<script src="assets/js/datatables/jquery.dataTables.columnFilter.js"></script>
-<script src="assets/js/datatables/lodash.min.js"></script>
-<script src="assets/js/datatables/responsive/js/datatables.responsive.js"></script>
-<script src="assets/js/morris.min.js"></script>
-<script src="assets/js/toastr.js"></script>
-<script src="assets/js/neon-chat.js"></script>
-<script src="assets/js/neon-custom.js"></script>
-<script src="assets/js/neon-demo.js"></script>
-<script type="text/javascript">
-var mapGeneral; //google map
-var mapAddHouse;
-var markers = []; //markers on the map
-var circle;
-var datatable;
+        <div id="mapOption">
+          <div class="row">
+            <div class="panel panel-primary" id="charts_env">
+              <div class="panel-heading">
+                <div class="panel-title">Filtros de Búsqueda</div>
+                <div class="panel-options">
+                  <ul class="nav nav-tabs">
+                    <li class="">
+                    <a href="#area-chart" data-toggle="tab">Titulo</a>
+                    </li>
+                    <li class="">
+                    <a href="#line-chart" data-toggle="tab">Precio</a>
+                    </li>
+                    <li class="active">
+                    <a href="#geolocation" data-toggle="tab">Geolocalización</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="tab-content">
+                 <div class="tab-pane" id="area-chart" style="">
+                  </div>
+                  <div class="tab-pane" id="line-chart" style="">
+                  </div>
+                  <div class="tab-pane active" id="geolocation" style="">
+                    <div class="form-group col-md-3">
+                      <input placeholder="Dirección - Código Postal" class="form-control col-md-12" type="text" id="zipCode">
+                    </div>
+                    <div class="form-group col-md-2">
+                      <div class="input-spinner">
+                        <button type="button" class="btn btn-default">-</button>
+                        <input id="controlDistance" type="text" class="form-control size-1" value="1" data-min="1" disabled>
+                        <button type="button" class="btn btn-default">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <a href="#" id="searchButton" class="btn btn-primary col-md-12 col-xs-12" >Buscar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+            </div>
+            <div class="panel panel-primary" data-collapsed="0">
+              <div class="panel-heading">
+                <div class="panel-title">Mapa</div>
+                <div class="panel-options">
+                  <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+                </div>
+                <div class="panel-options">
+                  <a href="#" id="fullScr"><i class="entypo-resize-full"></i></a>
+                </div>
+              </div>
+              <div id="container" class="panel-body no-padding" style="display: block;">
+                <div style="height:400px;">
+                  <div id="map-canvas" style="height:400px; width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="houseAdmin" style="display:none">
+          <div>
+            <a href="#" class="btn btn-primary add">
+              <i class="entypo-plus"></i>
+              Agregar
+            </a>
+          </div>
+          <br>
+          <div class"row">
+            <table id="housesTable" class="table table-bordered datatable dataTable">
+              <thead>
+                <tr>
+                  <th>Titulo</th>
+                  <th>Precio</th>
+                  <th>Publicado</th>
+                  <th>Fecha de Registro</th>
+                  <th>Usuario</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Agregar</h4>
+          </div>
+
+          <div class="modal-body">
+            <input placeholder="Titulo" class="form-control col-md-12" type="text" id="title">
+            <input placeholder="Precio" class="form-control col-md-12" type="text" id="price">
+            <div class="input-group">
+              <input id="date" placeholder="Fecha de Publicación" type="text" class="form-control datepicker" data-format="D, dd MM yyyy"> 
+              <div class="input-group-addon">
+                <a href="#">
+                  <i class="entypo-calendar"></i>
+                </a>
+              </div>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="published" value="true">Publicado
+              </label>
+            </div>
+            <input style="display:none;" id="latitude">
+            <input style="display:none;" id="longitude">
+            <div>Seleccionar Ubicación</div>
+            <div id="map-canvas1" style="height:200px; width: auto"></div>
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button id="create" type="button" class="btn btn-primary deleteBtn">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKA-vAfRLBxPYtJAlOJVcFP2ci_2DAh8Y&libraries=visualization&sensor=true_or_false"></script>
+    <link rel="stylesheet" href="assets/js/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="assets/js/rickshaw/rickshaw.min.css">
+    <link rel="stylesheet" href="assets/js/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/uikit/addons/css/datepicker.css">
+    <!-- Bottom Scripts -->
+    <script src="assets/js/gsap/main-gsap.js"></script>
+    <script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/joinable.js"></script>
+    <script src="assets/js/resizeable.js"></script>
+    <script src="assets/js/neon-api.js"></script>
+    <script src="assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
+    <script src="assets/js/jquery.sparkline.min.js"></script>
+    <script src="assets/js/rickshaw/vendor/d3.v3.js"></script>
+    <script src="assets/js/rickshaw/rickshaw.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    <script src="assets/js/raphael-min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/datatables/TableTools.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap.js"></script>
+    <script src="assets/js/datatables/jquery.dataTables.columnFilter.js"></script>
+    <script src="assets/js/datatables/lodash.min.js"></script>
+    <script src="assets/js/datatables/responsive/js/datatables.responsive.js"></script>
+    <script src="assets/js/morris.min.js"></script>
+    <script src="assets/js/toastr.js"></script>
+    <script src="assets/js/neon-chat.js"></script>
+    <script src="assets/js/neon-custom.js"></script>
+    <script src="assets/js/neon-demo.js"></script>
+    <script type="text/javascript">
+      var mapGeneral; //google map
+      var mapAddHouse;
+      var markers = []; //markers on the map
+      var circle;
+      var datatable;
+      /*
+         Initialize the map
+       */
+function initialize()
+{
+  var bounds = new google.maps.LatLngBounds();
+  var mapOptions =
+  {
+zoom: 5,
+      center: new google.maps.LatLng(23.6266557, -102.5375005),
+      styles:
+        [
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+          { "invert_lightness": true },
+          { "hue": "#ffdd00" },
+          { "lightness": -22 },
+          { "saturation": -42 },
+          { "visibility": "off" }
+          ]
+        },{
+          "featureType":"landscape",
+          "stylers":
+            [
+            {"color":"#f2f2f2"}
+          ]
+        },
+          {
+            "featureType":"road",
+            "stylers":
+              [
+              {"saturation":-100},
+              {"lightness":20}
+            ]
+          },
+          {
+            "featureType":"road.highway",
+            "stylers":
+              [
+              {"visibility":"simplified"}
+            ]
+          },
+          {
+            "featureType":"road.arterial",
+            "elementType":"labels.icon",
+            "stylers":
+              [
+              {"visibility":"off"}
+            ]
+          },
+          {
+            "featureType":"administrative",
+            "elementType":"labels.text.fill",
+            "stylers":[{"color":"#444444"}]
+          },
+          {
+            "featureType":"transit",
+            "stylers":[{"visibility":"off"}]
+          },
+          {
+            "featureType":"poi",
+            "stylers":[{"visibility":"off"}]
+          },{
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+            { "saturation": -38 },
+            { "lightness": -54 },
+            { "hue": "#00e5ff" }
+            ]
+          },{
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+            { "color": "#ffffff" },
+            { "saturation": 54 },
+            { "lightness": 51 },
+            { "visibility": "on" }
+            ]
+          },{
+            "featureType": "water",
+              "elementType": "labels.text.stroke",
+              "stylers": [
+              { "visibility": "off" }
+            ]
+          },{
+          }
+          ]
+  }
+  mapGeneral = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  mapAddHouse = new google.maps.Map(document.getElementById("map-canvas1"), mapOptions);
+}
 /*
-	Initialize the map
-	*/
-	function initialize()
-	{
-		var bounds = new google.maps.LatLngBounds();
-		var mapOptions =
-		{
-			zoom: 5,
-			center: new google.maps.LatLng(23.6266557, -102.5375005),
-			styles:
-			[
-			{
-				"elementType": "labels.icon",
-				"stylers": [
-				{ "invert_lightness": true },
-				{ "hue": "#ffdd00" },
-				{ "lightness": -22 },
-				{ "saturation": -42 },
-				{ "visibility": "off" }
-				]
-			},{
-				"featureType":"landscape",
-				"stylers":
-				[
-				{"color":"#f2f2f2"}
-				]
-			},
-			{
-				"featureType":"road",
-				"stylers":
-				[
-				{"saturation":-100},
-				{"lightness":20}
-				]
-			},
-			{
-				"featureType":"road.highway",
-				"stylers":
-				[
-				{"visibility":"simplified"}
-				]
-			},
-			{
-				"featureType":"road.arterial",
-				"elementType":"labels.icon",
-				"stylers":
-				[
-				{"visibility":"off"}
-				]
-			},
-			{
-				"featureType":"administrative",
-				"elementType":"labels.text.fill",
-				"stylers":[{"color":"#444444"}]
-			},
-			{
-				"featureType":"transit",
-				"stylers":[{"visibility":"off"}]
-			},
-			{
-				"featureType":"poi",
-				"stylers":[{"visibility":"off"}]
-			},{
-				"featureType": "water",
-				"elementType": "geometry",
-				"stylers": [
-				{ "saturation": -38 },
-				{ "lightness": -54 },
-				{ "hue": "#00e5ff" }
-				]
-			},{
-				"featureType": "water",
-				"elementType": "labels.text.fill",
-				"stylers": [
-				{ "color": "#ffffff" },
-				{ "saturation": 54 },
-				{ "lightness": 51 },
-				{ "visibility": "on" }
-				]
-			},{
-				"featureType": "water",
-				"elementType": "labels.text.stroke",
-				"stylers": [
-				{ "visibility": "off" }
-				]
-			},{
-			}
-			]
-		}
-		mapGeneral = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-		mapAddHouse = new google.maps.Map(document.getElementById("map-canvas1"), mapOptions);
-	}
-/*
-	Pin functionality
-	*/
-	function addMarker(location, map) {
-		var marker = new google.maps.Marker({
-			position: location,
-			map: map
-		});
-		markers.push(marker);
-	}
-	function setAllMap(map) {
-		for (var i = 0; i < markers.length; i++) {
-			markers[i].setMap(map);
-		}
-	}
-	function deleteMarkers() {
-		clearMarkers();
-		markers = [];
-	}
-	function clearMarkers() {
-		setAllMap(null);
-	}
-	function getLocationLL(map){
-		google.maps.event.addListener(map, 'click', function(e) {
-			clearMarkers();
-			addMarker(e.latLng, map);
-			$("#latitude").val(e.latLng.A);
-			$("#longitude").val(e.latLng.F);
-		});
-	}
-	function getHouses(params){
-		clearMarkers();
-		show_loading_bar(100);
-		$.post("assets/php/realEstateAPIAccessor.php", {"request":"houses", "action":"get","params":params} ,function(houses){			
-			houses.houses.forEach(function(house){
-				var latLng = new google.maps.LatLng(house.latitude,house.longitude);
-				addMarker(latLng, mapGeneral);
-				datatable.fnAddData([house.title, house.price, house.published, house.date_published, house.user.email]);
-			});
-		});
-	}
-	function createHouse(params){
-		$.post("assets/php/realEstateAPIAccessor.php", {request:"users",action:"createHouse",params:params} ,function(house){
-			console.log(house);
-			var latLng = new google.maps.LatLng(house.latitude,house.longitude);
-			addMarker(latLng, mapGeneral);
-		});
-	}
+   Pin functionality
+ */
+function addMarker(location, map) {
+  var marker = new google.maps.Marker({
+position: location,
+map: map
+});
+markers.push(marker);
+}
+function setAllMap(map) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+function deleteMarkers() {
+  clearMarkers();
+  markers = [];
+}
+function clearMarkers() {
+  setAllMap(null);
+}
+function getLocationLL(map){
+  google.maps.event.addListener(map, 'click', function(e) {
+      clearMarkers();
+      addMarker(e.latLng, map);
+      $("#latitude").val(e.latLng.A);
+      $("#longitude").val(e.latLng.F);
+      });
+}
+function getHouses(params){
+  clearMarkers();
+  show_loading_bar(100);
+  $.post("assets/php/realEstateAPIAccessor.php", {"request":"houses", "action":"get","params":params} ,function(houses){
+      houses.houses.forEach(function(house){
+        var latLng = new google.maps.LatLng(house.latitude,house.longitude);
+        addMarker(latLng, mapGeneral);
+        datatable.fnAddData([house.title, house.price, house.published, house.date_published, house.user.email]);
+        });
+      });
+}
+function createHouse(params){
+  $.post("assets/php/realEstateAPIAccessor.php", {request:"users",action:"createHouse",params:params} ,function(house){
+      console.log(house);
+      var latLng = new google.maps.LatLng(house.latitude,house.longitude);
+      addMarker(latLng, mapGeneral);
+      });
+}
 
-	function getLatLngFromGoogle(){
-		var path  = "https://maps.google.com/maps/api/geocode/json?key=AIzaSyBKA-vAfRLBxPYtJAlOJVcFP2ci_2DAh8Y&address="+$('#zipCode').val();
-		$.post(path, function(data)
-		{
-			var LLinfo = data;
-			if(data.status == "OK")
-			{
-				var radio = parseInt($("#controlDistance").val());
-				var mlat = data.results[0].geometry.location.lat;
-				var mlng = data.results[0].geometry.location.lng;
-				var center =  new google.maps.LatLng(mlat, mlng)
-				var area = {
-					strokeColor: '#FF0000',
-					strokeOpacity: 0.6,
-					strokeWeight: 1,
-					fillColor: '#FF0000',
-					fillOpacity: 0.25,
-					map: mapGeneral,
-					center: center,
-					radius:radio*1000
-				}
-				circle = circle!=null ? circle.setMap(null): circle;
-				circle = new google.maps.Circle(area);				   
-				mapGeneral.fitBounds(circle.getBounds());
-				getHouses({house:{lat:mlat,lng:mlng,radio:radio}});
-			}			
-		});
-	}
+function getLatLngFromGoogle(){
+  var path  = "https://maps.google.com/maps/api/geocode/json?key=AIzaSyBKA-vAfRLBxPYtJAlOJVcFP2ci_2DAh8Y&address="+$('#zipCode').val();
+  $.post(path, function(data)
+      {
+      var LLinfo = data;
+      if(data.status == "OK")
+      {
+      var radio = parseInt($("#controlDistance").val());
+      var mlat = data.results[0].geometry.location.lat;
+      var mlng = data.results[0].geometry.location.lng;
+      var center =  new google.maps.LatLng(mlat, mlng)
+      var area = {
+strokeColor: '#FF0000',
+strokeOpacity: 0.6,
+strokeWeight: 1,
+fillColor: '#FF0000',
+fillOpacity: 0.25,
+map: mapGeneral,
+center: center,
+radius:radio*1000
+}
+circle = circle!=null ? circle.setMap(null): circle;
+circle = new google.maps.Circle(area);
+  mapGeneral.fitBounds(circle.getBounds());
+  getHouses({house:{lat:mlat,lng:mlng,radio:radio}});
+  }
+});
+}
 
 
-	function clearInputs(){
-		$("#title").val("");
-		$("#date").val("");
-		$("#latitude").val("");
-		$("#longitude").val("");
-	}
+function clearInputs(){
+  $("#title").val("");
+  $("#date").val("");
+  $("#latitude").val("");
+  $("#longitude").val("");
+}
 
-	$(document).ready(function(){
+$(document).ready(function(){
 
-		$("#toggleHouses").click(function(){
-			$("#mapOption").hide();
-			$("#houseAdmin").show();
-		});
-		$("#houseSearch").click(function(){
-			$("#mapOption").show();
-			$("#houseAdmin").hide();
-		});
+    $("#toggleHouses").click(function(){
+      $("#mapOption").hide();
+      $("#houseAdmin").show();
+      });
+    $("#houseSearch").click(function(){
+      $("#mapOption").show();
+      $("#houseAdmin").hide();
+      });
 
-		$("#create").click(function(){
-			console.log("se esta guardando la casa");
-			createHouse({house:{title:$("#title").val(), published:($("#published").is(":checked") ? true : false), user_id:1,date_published:$("#date").val(), latitude: $("#latitude").val(),longitude:$("#longitude").val()}});
-			$("#modal-1").modal("hide");
+    $("#create").click(function(){
+      console.log("se esta guardando la casa");
+      createHouse({house:{title:$("#title").val(), published:($("#published").is(":checked") ? true : false), user_id:1,date_published:$("#date").val(), latitude: $("#latitude").val(),longitude:$("#longitude").val()}});
+      $("#modal-1").modal("hide");
 
-			var opts = {
-            "closeButton": true,
-            "debug": false,
-            "positionClass": "toast-top-right",
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-            };
-            toastr.success("La casa se ha creado correctamente", "Atención", opts);
-            clearInputs();
-            datatable.fnClearTable();
-            getHouses({});
-		});
+      var opts = {
+      "closeButton": true,
+      "debug": false,
+      "positionClass": "toast-top-right",
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+      };
+      toastr.success("La casa se ha creado correctamente", "Atención", opts);
+      clearInputs();
+      datatable.fnClearTable();
+      getHouses({});
+    });
 
-		$("#date").click(function(){
-			$("div.datepicker").css("z-index",9999);
-		});
+    $("#date").click(function(){
+        $("div.datepicker").css("z-index",9999);
+        });
 
-		datatable = $('#housesTable').dataTable({
-			"oLanguage": 
-			{
-				"sUrl": "/assets/i18n/Spanish.json"
-			}
-		});
-		google.maps.event.addDomListener(window, 'load', initialize);
-		getHouses({});
+    datatable = $('#housesTable').dataTable({
+        "oLanguage":
+        {
+        "sUrl": "/assets/i18n/Spanish.json"
+        }
+        });
+    google.maps.event.addDomListener(window, 'load', initialize);
+    getHouses({});
 
-		$('#searchButton').click(function(){
-			$(".nav-tabs").children().each(function(index, element){
-				if($(element).hasClass("active")){
-					switch($(element).children().html())
-					{
-						case "Geolocalización":
-							getLatLngFromGoogle();
-						break;
-					}
-				}				
-			});
+    $('#searchButton').click(function(){
+        $(".nav-tabs").children().each(function(index, element){
+          if($(element).hasClass("active")){
+          switch($(element).children().html())
+          {
+          case "Geolocalización":
+          getLatLngFromGoogle();
+          break;
+          }
+          }
+          });
 
-			
 
-			// searchHouses()
-		});
-		$(".datepicker").appendTo($("#date").parent());
 
-		$('a.add').click(function(){
-			$("#modal-1").modal('show');
-			setTimeout(function(){
-				google.maps.event.trigger(mapAddHouse,'resize');
-			},200);			
-			getLocationLL(mapAddHouse);
-		});
+        // searchHouses()
+        });
+    $(".datepicker").appendTo($("#date").parent());
 
-	// createHouse({house:{title:"AAAAAAAA", published:true, user_id:1,date_published:"11/11/2012", latitude: "113.23",longitude:"-23.32"}});
-	// searchHouses({"house":{"latitude":23.2312,"longitude":-23.2323,"radio":100}});
-	});
+    $('a.add').click(function(){
+        $("#modal-1").modal('show');
+        setTimeout(function(){
+          google.maps.event.trigger(mapAddHouse,'resize');
+          },200);
+        getLocationLL(mapAddHouse);
+        });
+
+    // createHouse({house:{title:"AAAAAAAA", published:true, user_id:1,date_published:"11/11/2012", latitude: "113.23",longitude:"-23.32"}});
+    // searchHouses({"house":{"latitude":23.2312,"longitude":-23.2323,"radio":100}});
+});
 </script>
 </body>
 </html>
