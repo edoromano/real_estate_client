@@ -24,25 +24,18 @@
     <![endif]-->
   </head>
   <body class="page-body  page-fade">
-    <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+    <div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
       <div class="sidebar-menu">
         <header class="logo-env">
         <!-- logo -->
         <div class="logo">
           <a href="index.html">
-            <img src="assets/images/logo@2x.png" width="120" alt="" />
           </a>
         </div>
 
         <!-- logo collapse icon -->
         <div class="sidebar-collapse">
           <a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
-            <i class="entypo-menu"></i>
-          </a>
-        </div>
-        <!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
-        <div class="sidebar-mobile-menu visible-xs">
-          <a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
             <i class="entypo-menu"></i>
           </a>
         </div>
@@ -79,15 +72,7 @@
         </ul>
       </div>
 
-      <div class="main-content">	
-        <div class="row">
-          <!-- Profile Info and Notifications -->
-          <div class="col-md-6 col-sm-8 clearfix">
-            <h1 id="action"></h1>
-          </div>
-          <br>
-          <hr>
-        </div>
+      <div class="main-content">
 
         <div id="mapOption">
           <div class="row">
@@ -257,109 +242,97 @@
       var markers = []; //markers on the map
       var circle;
       var datatable;
-      /*
-         Initialize the map
-       */
-function initialize()
-{
-  var bounds = new google.maps.LatLngBounds();
-  var mapOptions =
-  {
-zoom: 5,
-      center: new google.maps.LatLng(23.6266557, -102.5375005),
-      styles:
-        [
-        {
-          "elementType": "labels.icon",
-          "stylers": [
-          { "invert_lightness": true },
-          { "hue": "#ffdd00" },
-          { "lightness": -22 },
-          { "saturation": -42 },
-          { "visibility": "off" }
-          ]
-        },{
-          "featureType":"landscape",
-          "stylers":
+      function initialize() {
+        var bounds = new google.maps.LatLngBounds();
+        var mapOptions =
+        { "zoom": 5,
+          "center": new google.maps.LatLng(23.6266557, -102.5375005),
+          "styles":
             [
-            {"color":"#f2f2f2"}
-          ]
-        },
-          {
-            "featureType":"road",
-            "stylers":
-              [
-              {"saturation":-100},
-              {"lightness":20}
-            ]
-          },
-          {
-            "featureType":"road.highway",
-            "stylers":
-              [
-              {"visibility":"simplified"}
-            ]
-          },
-          {
-            "featureType":"road.arterial",
-            "elementType":"labels.icon",
-            "stylers":
-              [
-              {"visibility":"off"}
-            ]
-          },
-          {
-            "featureType":"administrative",
-            "elementType":"labels.text.fill",
-            "stylers":[{"color":"#444444"}]
-          },
-          {
-            "featureType":"transit",
-            "stylers":[{"visibility":"off"}]
-          },
-          {
-            "featureType":"poi",
-            "stylers":[{"visibility":"off"}]
-          },{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [
-            { "saturation": -38 },
-            { "lightness": -54 },
-            { "hue": "#00e5ff" }
-            ]
-          },{
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [
-            { "color": "#ffffff" },
-            { "saturation": 54 },
-            { "lightness": 51 },
-            { "visibility": "on" }
-            ]
-          },{
-            "featureType": "water",
-              "elementType": "labels.text.stroke",
+            {
+              "elementType": "labels.icon",
               "stylers": [
+              { "invert_lightness": true },
+              { "hue": "#ffdd00" },
+              { "lightness": -22 },
+              { "saturation": -42 },
               { "visibility": "off" }
-            ]
-          },{
-          }
-          ]
-  }
-  mapGeneral = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-  mapAddHouse = new google.maps.Map(document.getElementById("map-canvas1"), mapOptions);
-}
-/*
-   Pin functionality
- */
-function addMarker(location, map) {
-  var marker = new google.maps.Marker({
-position: location,
-map: map
-});
-markers.push(marker);
-}
+              ]
+            },{
+              "featureType":"landscape",
+              "stylers":
+                [
+                {"color":"#f2f2f2"}
+              ]
+            },
+              {
+                "featureType":"road",
+                "stylers":
+                  [
+                  {"saturation":-100},
+                  {"lightness":20}
+                ]
+              },
+              {
+                "featureType":"road.highway",
+                "stylers":
+                  [
+                  {"visibility":"simplified"}
+                ]
+              },
+              {
+                "featureType":"road.arterial",
+                "elementType":"labels.icon",
+                "stylers":
+                  [
+                  {"visibility":"off"}
+                ]
+              },
+              {
+                "featureType":"administrative",
+                "elementType":"labels.text.fill",
+                "stylers":[{"color":"#444444"}]
+              },
+              {
+                "featureType":"transit",
+                "stylers":[{"visibility":"off"}]
+              },
+              {
+                "featureType":"poi",
+                "stylers":[{"visibility":"off"}]
+              },{
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                { "saturation": -38 },
+                { "lightness": -54 },
+                { "hue": "#00e5ff" }
+                ]
+              },{
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                { "color": "#ffffff" },
+                { "saturation": 54 },
+                { "lightness": 51 },
+                { "visibility": "on" }
+                ]
+              },{
+                "featureType": "water",
+                  "elementType": "labels.text.stroke",
+                  "stylers": [
+                  { "visibility": "off" }
+                ]
+              }
+              ]
+        }
+        mapGeneral = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        mapAddHouse = new google.maps.Map(document.getElementById("map-canvas1"), mapOptions);
+      }
+      function addMarker(location, map) {
+        var marker = new google.maps.Marker({ "position": location, "map": map});
+        markers.push(marker);
+      }
 function setAllMap(map) {
   for (var i = 0; i < markers.length; i++) {
     markers[i].setMap(map);
@@ -383,13 +356,23 @@ function getLocationLL(map){
 function getHouses(params){
   clearMarkers();
   show_loading_bar(100);
-  $.post("assets/php/realEstateAPIAccessor.php", {"request":"houses", "action":"get","params":params} ,function(houses){
-      houses.houses.forEach(function(house){
+  $.ajax({
+    processData: true,
+    url: "http://api.geo_analytics.dev:3000/houses",
+    data: params,
+    success: function(response){
+      response.houses.forEach(function(house){
         var latLng = new google.maps.LatLng(house.latitude,house.longitude);
         addMarker(latLng, mapGeneral);
-        datatable.fnAddData([house.title, house.price, house.published, house.date_published, house.user.email]);
-        });
       });
+    },
+    dataType: "json",
+    crossDomain: true
+   });
+
+
+//  $.get(, function(response){
+//      });
 }
 function createHouse(params){
   $.post("assets/php/realEstateAPIAccessor.php", {request:"users",action:"createHouse",params:params} ,function(house){
@@ -402,30 +385,30 @@ function createHouse(params){
 function getLatLngFromGoogle(){
   var path  = "https://maps.google.com/maps/api/geocode/json?key=AIzaSyBKA-vAfRLBxPYtJAlOJVcFP2ci_2DAh8Y&address="+$('#zipCode').val();
   $.post(path, function(data)
-      {
+     {
       var LLinfo = data;
       if(data.status == "OK")
       {
-      var radio = parseInt($("#controlDistance").val());
-      var mlat = data.results[0].geometry.location.lat;
-      var mlng = data.results[0].geometry.location.lng;
-      var center =  new google.maps.LatLng(mlat, mlng)
-      var area = {
-strokeColor: '#FF0000',
-strokeOpacity: 0.6,
-strokeWeight: 1,
-fillColor: '#FF0000',
-fillOpacity: 0.25,
-map: mapGeneral,
-center: center,
-radius:radio*1000
-}
-circle = circle!=null ? circle.setMap(null): circle;
-circle = new google.maps.Circle(area);
-  mapGeneral.fitBounds(circle.getBounds());
-  getHouses({house:{lat:mlat,lng:mlng,radio:radio}});
-  }
-});
+        var radio = parseInt($("#controlDistance").val());
+        var mlat = data.results[0].geometry.location.lat;
+        var mlng = data.results[0].geometry.location.lng;
+        var center =  new google.maps.LatLng(mlat, mlng)
+        var area = {
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.6,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.25,
+            map: mapGeneral,
+            center: center,
+            radius:radio*1000
+            }
+            circle = circle!=null ? circle.setMap(null): circle;
+            circle = new google.maps.Circle(area);
+            mapGeneral.fitBounds(circle.getBounds());
+            getHouses({ latitude: mlat,longitude: mlng,radio: radio});
+      }
+     });
 }
 
 
